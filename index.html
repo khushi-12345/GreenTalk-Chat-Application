@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenTalk Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <header class="brand">
+        <div class="logo">G</div>
+        <div>
+          <h2>GreenTalk</h2>
+          <p>Simple Chat Application</p>
+        </div>
+      </header>
+
+      <div class="profile">
+        <div class="avatar my-avatar">K</div>
+        <div>
+          <strong>Khushi</strong>
+          <p>🟢 You are online</p>
+        </div>
+        <button id="addContact" title="Add contact">+</button>
+      </div>
+
+      <input id="contactSearch" class="search"
+             type="search" placeholder="Search contacts...">
+
+      <h4 class="section-title">YOUR CHATS</h4>
+      <div id="contacts" class="contacts"></div>
+    </aside>
+
+    <main class="chat">
+      <header class="chat-header">
+        <button id="backButton" class="back">‹</button>
+        <div id="chatAvatar" class="avatar">A</div>
+        <div class="chat-user">
+          <strong id="chatName">Aarav Sharma</strong>
+          <p id="chatStatus">🟢 Online (demo)</p>
+        </div>
+        <button id="chatInfo" class="header-button"
+                title="Chat information">ⓘ</button>
+      </header>
+
+      <div class="notice">
+        🔒 Frontend demo — messages are not sent over the internet.
+      </div>
+
+      <section id="messages" class="messages"></section>
+
+      <div id="typing" class="typing hidden">
+        Typing<span>...</span>
+      </div>
+
+      <form id="messageForm" class="composer">
+        <button type="button" id="emojiButton"
+                class="emoji" title="Add emoji">☺</button>
+        <input id="messageInput" type="text"
+               placeholder="Type a message..."
+               maxlength="1000" autocomplete="off">
+        <button class="send-button" type="submit">➤</button>
+      </form>
+      <p class="hint">Press Enter to send a message</p>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
